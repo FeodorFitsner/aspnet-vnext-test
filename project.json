@@ -5,7 +5,8 @@
         "Microsoft.AspNet.Server.WebListener": "1.0.0-beta1"
     },
     "commands": {
-        "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --server.urls http://localhost:57612"
+        "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --server.urls http://localhost:57612",
+        "run": "run server.urls=http://localhost:5003"
     },
     "frameworks": {
         "aspnet50": { }
