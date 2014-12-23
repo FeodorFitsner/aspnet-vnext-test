@@ -1,11 +1,11 @@
 {
     "dependencies": {
-        "Microsoft.AspNet.Hosting": "1.0.0-alpha4",
-        "Microsoft.AspNet.Mvc": "6.0.0-alpha4",
-        "Microsoft.AspNet.Server.WebListener": "1.0.0-alpha4"
+        "Microsoft.AspNet.Hosting": "1.0.0-beta1",
+        "Microsoft.AspNet.Mvc": "6.0.0-beta1",
+        "Microsoft.AspNet.Server.WebListener": "1.0.0-beta1"
     },
     "commands": {
-        "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --server.urls http://localhost:5000"
+        "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --server.urls http://localhost:57612"
     },
     "frameworks": {
         "aspnet50": { }
