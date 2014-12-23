@@ -17,4 +17,5 @@ public class Startup
         {
            return context.Response.WriteAsync("ASP.NET vNext");
         });
+    }
 }
