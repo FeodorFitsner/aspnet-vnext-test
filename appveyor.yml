@@ -11,7 +11,7 @@ install:
 - ps: Start-Job -Name web -Scriptblock { cd $env:appveyor_build_folder; k web }
 - ps: Wait-Job -Name web -Timeout 5
 - ps: Receive-Job -Name web
-- ps: Invoke-RestMethod http://localhost:5000
+- ps: Invoke-RestMethod http://localhost:57612
 
 build: off
 test: off
