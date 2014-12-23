@@ -8,7 +8,7 @@ install:
 
 # build and run app
 - kpm restore
-- ps: Start-Job -Name web -Scriptblock { k web }
+- ps: Start-Job -Name web -Scriptblock { cd $env:appveyor_build_folder; k web }
 - ps: Wait-Job -Name web -Timeout 5
 - ps: Receive-Job -Name web
 - ps: Invoke-RestMethod http://localhost:5000
