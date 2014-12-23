@@ -6,3 +6,10 @@ iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.co
 - kvm list
 - kvm install latest -runtime CoreCLR
 - kvm use 1.0.0-alpha4 -runtime CLR
+
+# build and run app
+- kpm restore
+- k web
+
+build: off
+test: off
