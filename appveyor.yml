@@ -10,6 +10,7 @@ install:
 - kpm restore
 - ps: Start-Job -Name web -Scriptblock { k web }
 - ps: Wait-Job -Name web -Timeout 5
+- ps: Receive-Job -Name web
 - ps: Invoke-RestMethod http://localhost:5000
 
 build: off
