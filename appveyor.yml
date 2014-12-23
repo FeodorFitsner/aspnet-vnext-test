@@ -1,14 +1,15 @@
 install:
 - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/aspnet/Home/dev/kvminstall.ps1'))
-- set PATH=%USERPROFILE%\.kre\bin;%PATH%
 - kvm upgrade
 - kvm list
-- kvm install latest -runtime CoreCLR
-- kvm use 1.0.0-rc1-10815 -runtime CLR
+#- kvm install latest -runtime CoreCLR
+#- kvm use 1.0.0-rc1-10815 -runtime CLR
 
 # build and run app
 - kpm restore
-- k web
+- Start-Job -Name web -Scriptblock { k web }
+- Wait-Job -Name web -Timeout 5
+- Invoke-RestMethod http://localhost:5000
 
 build: off
 test: off
