@@ -4,7 +4,7 @@ install:
 - kvm upgrade
 - kvm list
 - kvm install latest -runtime CoreCLR
-- kvm use 1.0.0-alpha4 -runtime CLR
+- kvm use 1.0.0-rc1 -runtime CLR
 
 # build and run app
 - kpm restore
