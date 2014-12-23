@@ -7,7 +7,7 @@ install:
 # build and run app
 - kpm restore
 - kpm build
-- dir
+- dir bin /b /s
 
 build: off
 test: off
