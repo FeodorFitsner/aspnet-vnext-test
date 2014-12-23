@@ -1,0 +1,8 @@
+install:
+- ps: Write-Output "Installing kvm from aspnet/home/dev..."
+iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/aspnet/Home/dev/kvminstall.ps1'))
+- set PATH=%USERPROFILE%\.kre\bin;%PATH%
+- kvm upgrade
+- kvm list
+- kvm install latest -runtime CoreCLR
+- kvm use 1.0.0-alpha4 -runtime CLR
